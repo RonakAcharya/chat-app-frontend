@@ -1,0 +1,21 @@
+.new-chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 15px;
+  }
+  .new-chat-container input {
+    padding: 10px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  .new-chat-container button {
+    background-color: #008069;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }

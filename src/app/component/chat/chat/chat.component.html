@@ -1,0 +1,25 @@
+<div class="chat-container">
+    <header>
+        <i class="bi bi-chevron-left" routerLink="/user-list"></i>
+        <ngx-avatars [name]="targetUser?.name" [size]="40"></ngx-avatars>
+
+      <span>{{ targetUser?.email }}</span>
+    </header>
+  
+    <div class="messages">
+      <div *ngFor="let msg of messages" [ngClass]="{ 'sent': msg.from === currentUser.email, 'received': msg.from !== currentUser.email }">
+        <ngx-avatars [name]="msg.from === currentUser.email ? currentUser.email : targetUser?.name" [size]="40"></ngx-avatars>
+        <!-- <img [src]="msg.from === currentUser.id ? currentUser.avatar : targetUser.avatar" class="avatar" /> -->
+        <div class="bubble">
+          {{ msg.message }}
+          <small>{{ msg.timestamp | date: 'shortTime' }}</small>
+        </div>
+      </div>
+    </div>
+  
+    <footer>
+      <input [(ngModel)]="message" placeholder="Type your message..." />
+      <button (click)="send()">Send</button>
+    </footer>
+  </div>
+  

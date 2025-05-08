@@ -1,0 +1,20 @@
+<header class="chat-header d-flex align-items-center p-3">
+  <h5 class="mb-0">{{ currentUser.name }}</h5>
+</header>
+
+<div *ngIf="chatList.length === 0" class="empty-list">
+  <img src="assets/empty-chat.svg" alt="No Chats">
+  <p>No chats yet</p>
+</div>
+
+<div *ngFor="let chat of chatList" (click)="openChat(chat)" class="chat-item">
+  <div class="avatar-circle">{{ chat.withName[0] }}</div>
+  <div class="chat-details">
+    <div class="chat-name">{{ chat.withName }}</div>
+    <div class="chat-message text-muted">{{ chat.lastMessage }}</div>
+  </div>
+</div>
+
+<button class="fab" (click)="startNewChat()">
+  <i class="bi bi-plus"></i>
+</button>
