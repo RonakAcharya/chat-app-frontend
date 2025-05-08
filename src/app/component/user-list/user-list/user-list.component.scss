@@ -19,6 +19,7 @@
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
+
 .chat-item:hover {
   background-color: #f9f9f9;
 }
@@ -40,10 +41,12 @@
   margin-left: 12px;
   flex: 1;
 }
+
 .chat-name {
   font-weight: 600;
   font-size: 1rem;
 }
+
 .chat-message {
   font-size: 0.875rem;
   color: #666;
@@ -56,11 +59,13 @@
   text-align: center;
   padding: 40px;
 }
+
 .empty-list img {
   max-width: 240px;
   opacity: 0.5;
   margin-bottom: 12px;
 }
+
 .empty-list p {
   font-size: 1.1rem;
   color: #888;
@@ -77,8 +82,9 @@
   color: white;
   font-size: 24px;
   border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 .fab i {
   font-size: 1.5rem;
 }
