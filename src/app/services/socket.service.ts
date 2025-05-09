@@ -8,7 +8,8 @@ import {Observable} from 'rxjs';
 export class SocketService {
 
   private _socket:Socket;
-  private readonly uri = 'http://localhost:3000';
+  // private readonly uri = 'http://localhost:3000';
+   private readonly uri = 'https://chat-backend-lr.onrender.com';
 
   constructor() {
     this._socket = io(this.uri);
