@@ -23,6 +23,7 @@
     padding: 10px;
     overflow-y: auto;
     background: #e5ddd5;
+    padding-bottom: 50px; 
   }
   
   .sent, .received {
@@ -69,6 +70,7 @@
     border-radius: 20px;
     border: 1px solid #ccc;
     margin-right: 10px;
+    flex-shrink: 0; /* Prevent footer from shrinking */
   }
   .back-btn {
     background: transparent;
@@ -79,3 +81,10 @@
     margin-right: 8px;
   }
   
+  html, body {
+    height: 100%;
+  }
+  
+  .chat-container {
+    height: calc(100vh - 50px); /* Adjust for footer height */
+  }
