@@ -17,7 +17,8 @@ export const routes: Routes = [
     },
     {
         path:'user-list',
-        component:UserListComponent
+        component:UserListComponent,
+        canActivate:[authGuard]
     },
     {
         path:'chat/:chatId',
